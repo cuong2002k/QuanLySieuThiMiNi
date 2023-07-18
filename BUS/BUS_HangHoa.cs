@@ -22,5 +22,18 @@ namespace BUS
 		{
 			dalhh.XoaHangHoa(hh);
 		}
+		public void SuaHangHoa(HangHoa hh)
+		{
+			dalhh.SuaHangHoa(hh);
+		}
+		public HangHoa TimHangHoaTheoMaVach(string mavach)
+		{
+			return dalhh.TimHangHoaTheoMaVach(mavach);
+		}
+
+		public HangHoa TimHangHoaTheoMAHH(int mahh)
+		{
+			return dalhh.TimHangHoaTheoMAHH(mahh);
+		}
 	}
 }

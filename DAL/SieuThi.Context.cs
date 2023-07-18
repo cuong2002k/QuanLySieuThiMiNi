@@ -34,7 +34,6 @@ namespace DAL
         public virtual DbSet<KhuyenMai> KhuyenMai { get; set; }
         public virtual DbSet<MucHangKhachHang> MucHangKhachHang { get; set; }
         public virtual DbSet<NhaCungCap> NhaCungCap { get; set; }
-        public virtual DbSet<NhanVien> NhanVien { get; set; }
         public virtual DbSet<NhomHang> NhomHang { get; set; }
         public virtual DbSet<PhanCa> PhanCa { get; set; }
         public virtual DbSet<PhanQuyen> PhanQuyen { get; set; }
@@ -44,5 +43,6 @@ namespace DAL
         public virtual DbSet<PhieuTraHangCT> PhieuTraHangCT { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<HangHoa> HangHoa { get; set; }
+        public virtual DbSet<NhanVien> NhanVien { get; set; }
     }
 }

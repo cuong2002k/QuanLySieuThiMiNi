@@ -17,6 +17,9 @@ namespace QuanLySieuThiMini
 			InitializeComponent();
 		}
 		UCHangHoa uchanghoa;
+		UCNhaCungCap ucnhacungcap;
+		UCNhapHang ucnhaphang;
+		UCNhomHang ucnhomhang;
 		private void btnHangHoa_Click(object sender, EventArgs e)
 		{
 			if(uchanghoa == null)
@@ -30,6 +33,57 @@ namespace QuanLySieuThiMini
 			{
 				uchanghoa.BringToFront();
 			}
+		}
+
+		private void btnNhaCungCap_Click(object sender, EventArgs e)
+		{
+			if (ucnhacungcap == null)
+			{
+				ucnhacungcap = new UCNhaCungCap();
+				ucnhacungcap.Dock = DockStyle.Fill;
+				MainContainer.Controls.Add(ucnhacungcap);
+				ucnhacungcap.BringToFront();
+			}
+			else
+			{
+				ucnhacungcap.BringToFront();
+			}
+		}
+
+		private void btnNhapHang_Click(object sender, EventArgs e)
+		{
+			if(ucnhaphang == null )
+			{
+				ucnhaphang = new UCNhapHang();
+				ucnhaphang.Dock = DockStyle.Fill;
+				MainContainer.Controls.Add(ucnhaphang);
+				ucnhaphang.BringToFront();
+			}
+			else
+			{
+				ucnhaphang.BringToFront();
+			}
+		}
+
+		private void frmQuanLyKho_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void accordionControlElement3_Click(object sender, EventArgs e)
+		{
+			if (ucnhomhang == null)
+			{
+				ucnhomhang = new UCNhomHang();
+				ucnhomhang.Dock = DockStyle.Fill;
+				MainContainer.Controls.Add(ucnhomhang);
+				ucnhomhang.BringToFront();
+			}
+			else
+			{
+				ucnhomhang.BringToFront();
+			}
+
 		}
 	}
 }

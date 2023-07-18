@@ -34,9 +34,9 @@
 			this.MainContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
 			this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
 			this.btnHangHoa = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.btnNhaCungCap = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.btnNhapHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
 			this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
@@ -64,9 +64,9 @@
 			this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
 			this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnHangHoa,
-            this.accordionControlElement2,
+            this.btnNhaCungCap,
             this.accordionControlElement3,
-            this.accordionControlElement4,
+            this.btnNhapHang,
             this.accordionControlElement5,
             accordionControlElement6});
 			this.accordionControl1.Location = new System.Drawing.Point(0, 31);
@@ -82,20 +82,23 @@
 			this.btnHangHoa.Text = "Hàng Hóa";
 			this.btnHangHoa.Click += new System.EventHandler(this.btnHangHoa_Click);
 			// 
-			// accordionControlElement2
+			// btnNhaCungCap
 			// 
-			this.accordionControlElement2.Name = "accordionControlElement2";
-			this.accordionControlElement2.Text = "Nhà Cung Cấp";
+			this.btnNhaCungCap.Name = "btnNhaCungCap";
+			this.btnNhaCungCap.Text = "Nhà Cung Cấp";
+			this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
 			// 
 			// accordionControlElement3
 			// 
 			this.accordionControlElement3.Name = "accordionControlElement3";
 			this.accordionControlElement3.Text = "Nhóm Hàng";
+			this.accordionControlElement3.Click += new System.EventHandler(this.accordionControlElement3_Click);
 			// 
-			// accordionControlElement4
+			// btnNhapHang
 			// 
-			this.accordionControlElement4.Name = "accordionControlElement4";
-			this.accordionControlElement4.Text = "Nhập Hàng";
+			this.btnNhapHang.Name = "btnNhapHang";
+			this.btnNhapHang.Text = "Nhập Hàng";
+			this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click);
 			// 
 			// accordionControlElement5
 			// 
@@ -131,6 +134,7 @@
 			this.NavigationControl = this.accordionControl1;
 			this.Text = "Quản Lý Siêu Thị Mini";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+			this.Load += new System.EventHandler(this.frmQuanLyKho_Load);
 			((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
@@ -144,9 +148,9 @@
 		private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
 		private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement btnHangHoa;
-		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
+		private DevExpress.XtraBars.Navigation.AccordionControlElement btnNhaCungCap;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
-		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
+		private DevExpress.XtraBars.Navigation.AccordionControlElement btnNhapHang;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
 	}
 }

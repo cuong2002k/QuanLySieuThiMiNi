@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 using BUS;
+using DevExpress.DataAccess;
 namespace QuanLySieuThiMini.UI
 {
 	public partial class UCHangHoa : UserControl
@@ -58,26 +59,40 @@ namespace QuanLySieuThiMini.UI
 
 		private void dvDSHangHoa_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
 		{
-			hh.MaHH = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("MaHH").ToString());
-			hh.TenHang = dvDSHangHoa.GetFocusedRowCellValue("TenHang").ToString();
-			hh.MaNH = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("MaHH").ToString());
-			hh.XuatXu = dvDSHangHoa.GetFocusedRowCellValue("XuatXu").ToString();
-			hh.GiaNhap = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("GiaNhap").ToString());
-			hh.GiaBan = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("GiaBan").ToString());
-			hh.DonViTinh = dvDSHangHoa.GetFocusedRowCellValue("DonViTinh").ToString();
-			hh.NhaCungCap = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("NhaCungCap").ToString());
-			hh.MaVach = dvDSHangHoa.GetFocusedRowCellValue("MaVach").ToString();
-			hh.SoLuong = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("SoLuong").ToString());
-			hh.DinhMuc = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("DinhMuc").ToString());
-			hh.VAT = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("VAT").ToString());
-			hh.TrangThaiBan = bool.Parse(dvDSHangHoa.GetFocusedRowCellValue("TrangThaiBan").ToString());
+			if(dvDSHangHoa.DataRowCount >= 1)
+			{
+				hh.MaHH = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("MaHH").ToString());
+				hh.TenHang = dvDSHangHoa.GetFocusedRowCellValue("TenHang").ToString();
+				hh.MaNH = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("MaHH").ToString());
+				hh.XuatXu = dvDSHangHoa.GetFocusedRowCellValue("XuatXu").ToString();
+				hh.GiaNhap = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("GiaNhap").ToString());
+				hh.GiaBan = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("GiaBan").ToString());
+				hh.DonViTinh = dvDSHangHoa.GetFocusedRowCellValue("DonViTinh").ToString();
+				hh.NhaCungCap = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("NhaCungCap").ToString());
+				hh.MaVach = dvDSHangHoa.GetFocusedRowCellValue("MaVach").ToString();
+				hh.SoLuong = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("SoLuong").ToString());
+				hh.DinhMuc = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("DinhMuc").ToString());
+				hh.VAT = int.Parse(dvDSHangHoa.GetFocusedRowCellValue("VAT").ToString());
+				hh.TrangThaiBan = bool.Parse(dvDSHangHoa.GetFocusedRowCellValue("TrangThaiBan").ToString());
+			}
+			
 			
 		}
 
 		private void dvDSHangHoa_DoubleClick(object sender, EventArgs e)
 		{
-			NewHangHoa ucnew = new NewHangHoa();
-			ucnew.Show();
+			EditHangHoa form = new EditHangHoa();
+			EditHangHoa.instanse.filldata(hh);
+			form.Show();
+
+		}
+
+		private void btnSua_Click(object sender, EventArgs e)
+		{
+			EditHangHoa form = new EditHangHoa();
+			EditHangHoa.instanse.filldata(hh);
+			form.Show();
+			
 		}
 	}
 }

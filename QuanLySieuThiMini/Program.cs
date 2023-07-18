@@ -17,7 +17,7 @@ namespace QuanLySieuThiMini
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new frmQuanLyKho());
+			Application.Run(new FormTest());
 		}
 	}
 }

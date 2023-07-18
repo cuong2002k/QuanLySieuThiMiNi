@@ -14,7 +14,6 @@
         <EntityTypeShape EntityType="SieuThiMini.KhuyenMai" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="SieuThiMini.MucHangKhachHang" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SieuThiMini.NhaCungCap" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SieuThiMini.NhanVien" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SieuThiMini.NhomHang" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SieuThiMini.PhanCa" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SieuThiMini.PhanQuyen" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
@@ -25,6 +24,7 @@
         <EntityTypeShape EntityType="SieuThiMini.sysdiagrams" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="SieuThiMini.FK_KhuyenMai_DSKhuyenMai" ManuallyRouted="false" />
         <EntityTypeShape EntityType="SieuThiMini.HangHoa" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="SieuThiMini.NhanVien" Width="1.5" PointX="5.375" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

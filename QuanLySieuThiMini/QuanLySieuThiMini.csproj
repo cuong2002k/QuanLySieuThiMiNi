@@ -35,10 +35,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v21.2" />
     <Reference Include="DevExpress.Data.Desktop.v21.2" />
     <Reference Include="DevExpress.Data.v21.2" />
+    <Reference Include="DevExpress.Images.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v21.2.Core" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v21.2" />
     <Reference Include="DevExpress.XtraBars.v21.2" />
     <Reference Include="DevExpress.Sparkline.v21.2.Core" />
@@ -46,6 +51,7 @@
     <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v21.2.Core.Desktop, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -57,7 +63,13 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -74,6 +86,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SieuThiMiniDataSet.Designer.cs">
@@ -82,7 +100,7 @@
       <DependentUpon>SieuThiMiniDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="UI\EditHangHoa.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\EditHangHoa.Designer.cs">
       <DependentUpon>EditHangHoa.cs</DependentUpon>
@@ -93,14 +111,53 @@
     <Compile Include="UI\NewHangHoa.Designer.cs">
       <DependentUpon>NewHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\NewNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NewNhaCungCap.Designer.cs">
+      <DependentUpon>NewNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ThemhangTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ThemhangTra.Designer.cs">
+      <DependentUpon>ThemhangTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UCHangHoa.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\UCHangHoa.Designer.cs">
       <DependentUpon>UCHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UCNhaCungCap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UCNhaCungCap.Designer.cs">
+      <DependentUpon>UCNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UCNhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UCNhapHang.Designer.cs">
+      <DependentUpon>UCNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UCNhomHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UCNhomHang.Designer.cs">
+      <DependentUpon>UCNhomHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UCTraHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UCTraHang.Designer.cs">
+      <DependentUpon>UCTraHang.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -112,11 +169,32 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\EditHangHoa.resx">
+      <DependentUpon>EditHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\NewHangHoa.resx">
       <DependentUpon>NewHangHoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\NewNhaCungCap.resx">
+      <DependentUpon>NewNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ThemhangTra.resx">
+      <DependentUpon>ThemhangTra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\UCHangHoa.resx">
       <DependentUpon>UCHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCNhaCungCap.resx">
+      <DependentUpon>UCNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCNhapHang.resx">
+      <DependentUpon>UCNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCNhomHang.resx">
+      <DependentUpon>UCNhomHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCTraHang.resx">
+      <DependentUpon>UCTraHang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>

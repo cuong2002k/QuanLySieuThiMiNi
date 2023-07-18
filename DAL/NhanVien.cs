@@ -17,17 +17,16 @@ namespace DAL
         public int MaNV { get; set; }
         public string TenNV { get; set; }
         public Nullable<bool> GioiTinh { get; set; }
-        public string NgaySinh { get; set; }
+        public Nullable<System.DateTime> NgaySinh { get; set; }
         public string SDT { get; set; }
         public string DiaChi { get; set; }
         public string Email { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
-        public string MaQuyen { get; set; }
-        public string NgayVaoLam { get; set; }
-        public string NgayNghiViec { get; set; }
+        public Nullable<int> MaQuyen { get; set; }
+        public Nullable<System.DateTime> NgayVaoLam { get; set; }
         public Nullable<bool> TrangThaiTaiKhoan { get; set; }
         public Nullable<int> Luong { get; set; }
-        public string MaCong { get; set; }
+        public int MaCong { get; set; }
     }
 }

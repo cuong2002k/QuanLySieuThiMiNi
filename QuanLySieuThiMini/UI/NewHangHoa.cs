@@ -59,5 +59,7 @@ namespace QuanLySieuThiMini.UI
 			form?.LoadDSHangHoa();
 			this.Close();
 		}
+
+
 	}
 }
