@@ -20,8 +20,7 @@ namespace DAL
         public string DiaChi { get; set; }
         public string SDT { get; set; }
         public Nullable<int> Diem { get; set; }
-        public string MaMucHang { get; set; }
-        public string NgayTao { get; set; }
+        public Nullable<System.DateTime> NgayTao { get; set; }
         public Nullable<int> NamGanBo { get; set; }
     }
 }

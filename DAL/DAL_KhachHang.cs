@@ -50,7 +50,6 @@ namespace DAL
 					fKhachHang.DiaChi = sKhachHang.DiaChi;
 					fKhachHang.SDT = sKhachHang.SDT;
 					fKhachHang.Diem = sKhachHang.Diem;
-					fKhachHang.MaMucHang = sKhachHang.MaMucHang;
 					fKhachHang.NgayTao = sKhachHang.NgayTao;
 					fKhachHang.NamGanBo = sKhachHang.NamGanBo;
 					db.SaveChanges();

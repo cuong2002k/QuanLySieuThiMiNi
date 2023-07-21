@@ -36,11 +36,11 @@ namespace QuanLySieuThiMini.UI
 		private void btnThem_Click(object sender, EventArgs e)
 		{
 			bushh = new BUS_HangHoa();
-			ThemhangTra frm = new ThemhangTra();
+			NewhangTra frm = new NewhangTra();
 			HangHoa fhanghoa = bushh.TimHangHoaTheoMAHH(maHH);
 			if(fhanghoa != null)
 			{
-				ThemhangTra.instance.curhanghoa = fhanghoa;
+				NewhangTra.instance.curhanghoa = fhanghoa;
 			}
 			frm.Show();
 		}
@@ -55,6 +55,7 @@ namespace QuanLySieuThiMini.UI
 
 		public void addDShangTra(HangTra hangTra)
 		{
+		
 			lsthangtra.Add(hangTra);
 			grDsTrahang.DataSource = null;
 			grDsTrahang.DataSource = lsthangtra;
@@ -67,6 +68,35 @@ namespace QuanLySieuThiMini.UI
 			{
 				grDsTrahang.DataSource = null;
 				lsthangtra = null;
+			}
+		}
+
+		private void simpleButton3_Click(object sender, EventArgs e)
+		{
+			if(gvDstrahang.RowCount > 0)
+			{
+				PhieuTraHang pth = new PhieuTraHang();
+				pth.MaNV = 1;
+				pth.NgayTao = DateTime.Now;
+				SieuThiMiniEntities db = new SieuThiMiniEntities();
+				db.PhieuTraHang.Add(pth);
+				db.SaveChanges();
+				MessageBox.Show(pth.SoPhieuTra.ToString());
+				for (int i = 0; i < gvDstrahang.RowCount; i++)
+				{
+					PhieuTraHangCT hhct = new PhieuTraHangCT();
+					hhct.MaHangTra = int.Parse(gvDstrahang.GetRowCellValue(i, "MaHH").ToString());
+					hhct.SoLuongTra = int.Parse(gvDstrahang.GetRowCellValue(i, "SoLuongTra").ToString());
+					hhct.lydotrahang = gvDstrahang.GetRowCellValue(i, "Lydotra").ToString();
+					hhct.SoPhieuTra = pth.SoPhieuTra;
+					db.PhieuTraHangCT.Add(hhct);
+				}
+
+				MessageBox.Show("Thêm phiếu trả thành công !!!");
+			}
+			else
+			{
+				MessageBox.Show("Vui lòng nhập lượng hàng muốn xuất !!!");
 			}
 		}
 	}

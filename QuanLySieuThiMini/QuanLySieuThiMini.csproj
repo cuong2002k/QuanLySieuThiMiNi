@@ -80,11 +80,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLy.Designer.cs">
+      <DependentUpon>frmQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThuKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThuKho.Designer.cs">
+      <DependentUpon>frmThuKho.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTest.cs">
       <SubType>Form</SubType>
@@ -94,10 +106,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SieuThiMiniDataSet.Designer.cs">
+    <Compile Include="SieuThiMiniDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SieuThiMiniDataSet.xsd</DependentUpon>
+      <DependentUpon>SieuThiMiniDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="UI\EditHangHoa.cs">
       <SubType>Form</SubType>
@@ -117,11 +129,29 @@
     <Compile Include="UI\NewNhaCungCap.Designer.cs">
       <DependentUpon>NewNhaCungCap.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\ThemhangTra.cs">
+    <Compile Include="UI\NewKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\ThemhangTra.Designer.cs">
-      <DependentUpon>ThemhangTra.cs</DependentUpon>
+    <Compile Include="UI\NewKhachHang.Designer.cs">
+      <DependentUpon>NewKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NewhangTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NewhangTra.Designer.cs">
+      <DependentUpon>NewhangTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NewNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NewNhanVien.Designer.cs">
+      <DependentUpon>NewNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UCBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UCBanHang.Designer.cs">
+      <DependentUpon>UCBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UCHangHoa.cs">
       <SubType>UserControl</SubType>
@@ -129,11 +159,23 @@
     <Compile Include="UI\UCHangHoa.Designer.cs">
       <DependentUpon>UCHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UCKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UCKhachHang.Designer.cs">
+      <DependentUpon>UCKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UCNhaCungCap.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\UCNhaCungCap.Designer.cs">
       <DependentUpon>UCNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UCNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UCNhanVien.Designer.cs">
+      <DependentUpon>UCNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UCNhapHang.cs">
       <SubType>UserControl</SubType>
@@ -153,8 +195,14 @@
     <Compile Include="UI\UCTraHang.Designer.cs">
       <DependentUpon>UCTraHang.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLy.resx">
+      <DependentUpon>frmQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThuKho.resx">
+      <DependentUpon>frmThuKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTest.resx">
       <DependentUpon>FormTest.cs</DependentUpon>
@@ -178,14 +226,29 @@
     <EmbeddedResource Include="UI\NewNhaCungCap.resx">
       <DependentUpon>NewNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\ThemhangTra.resx">
-      <DependentUpon>ThemhangTra.cs</DependentUpon>
+    <EmbeddedResource Include="UI\NewKhachHang.resx">
+      <DependentUpon>NewKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NewhangTra.resx">
+      <DependentUpon>NewhangTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NewNhanVien.resx">
+      <DependentUpon>NewNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCBanHang.resx">
+      <DependentUpon>UCBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UCHangHoa.resx">
       <DependentUpon>UCHangHoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCKhachHang.resx">
+      <DependentUpon>UCKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\UCNhaCungCap.resx">
       <DependentUpon>UCNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UcNhanVien.resx">
+      <DependentUpon>UCNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UCNhapHang.resx">
       <DependentUpon>UCNhapHang.cs</DependentUpon>
@@ -209,16 +272,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SieuThiMiniDataSet.xsc">
-      <DependentUpon>SieuThiMiniDataSet.xsd</DependentUpon>
+    <None Include="SieuThiMiniDataSet1.xsc">
+      <DependentUpon>SieuThiMiniDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="SieuThiMiniDataSet.xsd">
+    <None Include="SieuThiMiniDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SieuThiMiniDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>SieuThiMiniDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SieuThiMiniDataSet.xss">
-      <DependentUpon>SieuThiMiniDataSet.xsd</DependentUpon>
+    <None Include="SieuThiMiniDataSet1.xss">
+      <DependentUpon>SieuThiMiniDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

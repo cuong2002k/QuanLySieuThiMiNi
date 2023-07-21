@@ -12,11 +12,11 @@ using DAL;
 using BUS;
 namespace QuanLySieuThiMini.UI
 {
-	public partial class ThemhangTra : DevExpress.XtraEditors.XtraForm
+	public partial class NewhangTra : DevExpress.XtraEditors.XtraForm
 	{
-		public static ThemhangTra instance;
+		public static NewhangTra instance;
 		public HangHoa curhanghoa;
-		public ThemhangTra()
+		public NewhangTra()
 		{
 			instance = this;
 			InitializeComponent();
@@ -55,7 +55,7 @@ namespace QuanLySieuThiMini.UI
 		}
 		private void btnLuu_Click(object sender, EventArgs e)
 		{
-			if(!checkemty(txtSLxuat.Text) || !checkemty(txtLydoXuat.Text))
+			if(!checkemty(txtSLxuat.Text) && !checkemty(txtLydoXuat.Text))
 			{
 				HangTra ht = new HangTra();
 				ht.MaHH = curhanghoa.MaHH;

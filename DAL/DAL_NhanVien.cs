@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-	class DAL_NhanVien
+	public class DAL_NhanVien
 	{
 		SieuThiMiniEntities db;
 
@@ -60,6 +60,14 @@ namespace DAL
 				NhanVien fnhanvien = db.NhanVien.SingleOrDefault(n => n.MaNV == MaNhanVien);
 				db.NhanVien.Remove(fnhanvien);
 				db.SaveChanges();
+			}
+		}
+
+		public NhanVien timNhanvien(int manv)
+		{
+			using (db = new SieuThiMiniEntities())
+			{
+				return db.NhanVien.SingleOrDefault(n => n.MaNV == manv);
 			}
 		}
 	}

@@ -95,8 +95,7 @@
           <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
           <Property Name="SDT" Type="varchar" MaxLength="12" />
           <Property Name="Diem" Type="int" />
-          <Property Name="MaMucHang" Type="varchar" MaxLength="10" />
-          <Property Name="NgayTao" Type="nvarchar" MaxLength="50" />
+          <Property Name="NgayTao" Type="date" />
           <Property Name="NamGanBo" Type="int" />
         </EntityType>
         <EntityType Name="KhuyenMai">
@@ -195,7 +194,7 @@
           <Key>
             <PropertyRef Name="SoPhieuTra" />
           </Key>
-          <Property Name="SoPhieuTra" Type="int" Nullable="false" />
+          <Property Name="SoPhieuTra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaNV" Type="int" Nullable="false" />
           <Property Name="NgayTao" Type="date" />
         </EntityType>
@@ -323,20 +322,6 @@
           <Property Name="VAT" Type="Int32" />
           <Property Name="MaKM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="KhachHang">
-          <Key>
-            <PropertyRef Name="MaKH" />
-          </Key>
-          <Property Name="MaKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CMND" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
-          <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="SDT" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
-          <Property Name="Diem" Type="Int32" />
-          <Property Name="MaMucHang" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="NgayTao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NamGanBo" Type="Int32" />
-        </EntityType>
         <EntityType Name="KhuyenMai">
           <Key>
             <PropertyRef Name="MaKM" />
@@ -411,24 +396,6 @@
           <Property Name="SoLuongNhap" Type="Int32" />
           <Property Name="VAT" Type="Int32" />
         </EntityType>
-        <EntityType Name="PhieuTraHang">
-          <Key>
-            <PropertyRef Name="SoPhieuTra" />
-          </Key>
-          <Property Name="SoPhieuTra" Type="Int32" Nullable="false" />
-          <Property Name="MaNV" Type="Int32" Nullable="false" />
-          <Property Name="NgayTao" Type="DateTime" Precision="0" />
-        </EntityType>
-        <EntityType Name="PhieuTraHangCT">
-          <Key>
-            <PropertyRef Name="MaHangTra" />
-            <PropertyRef Name="SoPhieuTra" />
-          </Key>
-          <Property Name="MaHangTra" Type="Int32" Nullable="false" />
-          <Property Name="SoPhieuTra" Type="Int32" Nullable="false" />
-          <Property Name="SoLuongTra" Type="Int32" />
-          <Property Name="lydotrahang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -457,7 +424,6 @@
           <EntitySet Name="GiaoCa" EntityType="Self.GiaoCa" />
           <EntitySet Name="HoaDon" EntityType="Self.HoaDon" />
           <EntitySet Name="HoaDonCT" EntityType="Self.HoaDonCT" />
-          <EntitySet Name="KhachHang" EntityType="Self.KhachHang" />
           <EntitySet Name="KhuyenMai" EntityType="Self.KhuyenMai" />
           <EntitySet Name="MucHangKhachHang" EntityType="Self.MucHangKhachHang" />
           <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" />
@@ -466,8 +432,6 @@
           <EntitySet Name="PhanQuyen" EntityType="Self.PhanQuyen" />
           <EntitySet Name="PhieuNhapHang" EntityType="Self.PhieuNhapHang" />
           <EntitySet Name="PhieuNhapHangCT" EntityType="Self.PhieuNhapHangCT" />
-          <EntitySet Name="PhieuTraHang" EntityType="Self.PhieuTraHang" />
-          <EntitySet Name="PhieuTraHangCT" EntityType="Self.PhieuTraHangCT" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <AssociationSet Name="FK_KhuyenMai_DSKhuyenMai" Association="Self.FK_KhuyenMai_DSKhuyenMai">
             <End Role="DSKhuyenMai" EntitySet="DSKhuyenMai" />
@@ -475,6 +439,9 @@
           </AssociationSet>
           <EntitySet Name="HangHoa" EntityType="SieuThiMini.HangHoa" />
           <EntitySet Name="NhanVien" EntityType="SieuThiMini.NhanVien" />
+          <EntitySet Name="PhieuTraHang" EntityType="SieuThiMini.PhieuTraHang" />
+          <EntitySet Name="PhieuTraHangCT" EntityType="SieuThiMini.PhieuTraHangCT" />
+          <EntitySet Name="KhachHang" EntityType="SieuThiMini.KhachHang" />
         </EntityContainer>
         <EntityType Name="HangHoa">
           <Key>
@@ -512,6 +479,37 @@
           <Property Name="TrangThaiTaiKhoan" Type="Boolean" />
           <Property Name="Luong" Type="Int32" />
           <Property Name="MaCong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="PhieuTraHang">
+          <Key>
+            <PropertyRef Name="SoPhieuTra" />
+          </Key>
+          <Property Name="SoPhieuTra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaNV" Type="Int32" Nullable="false" />
+          <Property Name="NgayTao" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="PhieuTraHangCT">
+          <Key>
+            <PropertyRef Name="MaHangTra" />
+            <PropertyRef Name="SoPhieuTra" />
+          </Key>
+          <Property Name="MaHangTra" Type="Int32" Nullable="false" />
+          <Property Name="SoPhieuTra" Type="Int32" Nullable="false" />
+          <Property Name="SoLuongTra" Type="Int32" />
+          <Property Name="lydotrahang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="KhachHang">
+          <Key>
+            <PropertyRef Name="MaKH" />
+          </Key>
+          <Property Name="MaKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CMND" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Diem" Type="Int32" />
+          <Property Name="NgayTao" Type="DateTime" Precision="0" />
+          <Property Name="NamGanBo" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -582,21 +580,6 @@
                 <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
                 <ScalarProperty Name="VAT" ColumnName="VAT" />
                 <ScalarProperty Name="MaKM" ColumnName="MaKM" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="KhachHang">
-            <EntityTypeMapping TypeName="SieuThiMini.KhachHang">
-              <MappingFragment StoreEntitySet="KhachHang">
-                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
-                <ScalarProperty Name="TenKH" ColumnName="TenKH" />
-                <ScalarProperty Name="CMND" ColumnName="CMND" />
-                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
-                <ScalarProperty Name="SDT" ColumnName="SDT" />
-                <ScalarProperty Name="Diem" ColumnName="Diem" />
-                <ScalarProperty Name="MaMucHang" ColumnName="MaMucHang" />
-                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
-                <ScalarProperty Name="NamGanBo" ColumnName="NamGanBo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -680,25 +663,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PhieuTraHang">
-            <EntityTypeMapping TypeName="SieuThiMini.PhieuTraHang">
-              <MappingFragment StoreEntitySet="PhieuTraHang">
-                <ScalarProperty Name="SoPhieuTra" ColumnName="SoPhieuTra" />
-                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
-                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="PhieuTraHangCT">
-            <EntityTypeMapping TypeName="SieuThiMini.PhieuTraHangCT">
-              <MappingFragment StoreEntitySet="PhieuTraHangCT">
-                <ScalarProperty Name="MaHangTra" ColumnName="MaHangTra" />
-                <ScalarProperty Name="SoPhieuTra" ColumnName="SoPhieuTra" />
-                <ScalarProperty Name="SoLuongTra" ColumnName="SoLuongTra" />
-                <ScalarProperty Name="lydotrahang" ColumnName="lydotrahang" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="SieuThiMini.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
@@ -746,6 +710,39 @@
                 <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
                 <ScalarProperty Name="TenNV" ColumnName="TenNV" />
                 <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhieuTraHang">
+            <EntityTypeMapping TypeName="SieuThiMini.PhieuTraHang">
+              <MappingFragment StoreEntitySet="PhieuTraHang">
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="SoPhieuTra" ColumnName="SoPhieuTra" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhieuTraHangCT">
+            <EntityTypeMapping TypeName="SieuThiMini.PhieuTraHangCT">
+              <MappingFragment StoreEntitySet="PhieuTraHangCT">
+                <ScalarProperty Name="lydotrahang" ColumnName="lydotrahang" />
+                <ScalarProperty Name="SoLuongTra" ColumnName="SoLuongTra" />
+                <ScalarProperty Name="SoPhieuTra" ColumnName="SoPhieuTra" />
+                <ScalarProperty Name="MaHangTra" ColumnName="MaHangTra" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KhachHang">
+            <EntityTypeMapping TypeName="SieuThiMini.KhachHang">
+              <MappingFragment StoreEntitySet="KhachHang">
+                <ScalarProperty Name="NamGanBo" ColumnName="NamGanBo" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="Diem" ColumnName="Diem" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

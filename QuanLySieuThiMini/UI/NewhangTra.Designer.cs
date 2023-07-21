@@ -1,6 +1,6 @@
 ﻿namespace QuanLySieuThiMini.UI
 {
-	partial class ThemhangTra
+	partial class NewhangTra
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemhangTra));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewhangTra));
 			this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
 			this.txtLydoXuat = new System.Windows.Forms.RichTextBox();
