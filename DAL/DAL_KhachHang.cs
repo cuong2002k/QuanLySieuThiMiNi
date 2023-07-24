@@ -65,5 +65,14 @@ namespace DAL
 				db.SaveChanges();
 			}
 		}
+
+		public KhachHang TimKhachHang(string sdt)
+		{
+			using (db = new SieuThiMiniEntities())
+			{
+				KhachHang fkhachhang = db.KhachHang.SingleOrDefault(n => n.SDT == sdt);
+				return fkhachhang;
+			}
+		}
 	}
 }

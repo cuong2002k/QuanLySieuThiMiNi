@@ -21,18 +21,19 @@ namespace QuanLySieuThiMini
 		UCTraHang uctrahang;
 		UCKhachHang ucKhachHang;
 		UCNhanVien ucnv;
+		UCBanHang bh;
 		private void FormTest_Load(object sender, EventArgs e)
 		{
-			if (ucnv == null)
+			if (bh == null)
 			{
-				ucnv = new UCNhanVien();
-				ucnv.Dock = DockStyle.Fill;
-				panel1.Controls.Add(ucnv);
-				ucnv.BringToFront();
+				bh = new UCBanHang();
+				bh.Dock = DockStyle.Fill;
+				panel1.Controls.Add(bh);
+				bh.BringToFront();
 			}
 			else
 			{
-				ucnv.BringToFront();
+				bh.BringToFront();
 			}
 		}
 	}

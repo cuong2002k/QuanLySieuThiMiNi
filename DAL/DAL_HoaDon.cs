@@ -24,17 +24,23 @@ namespace DAL
 			}	
 		}
 
-		public void ThemHoaDon(HoaDon thoadon, List<HoaDonCT> tLstHoadon)
+		public void ThemHoaDon(HoaDon thoadon)
 		{
 			using (db = new SieuThiMiniEntities())
 			{
 				db.HoaDon.Add(thoadon);
-				db.HoaDonCT.AddRange(tLstHoadon);
 				db.SaveChanges();
 			}
 		}
 
-
+		public void ThemHoaDonCT(HoaDonCT ctHoaDon)
+		{
+			using (db = new SieuThiMiniEntities())
+			{
+				db.HoaDonCT.Add(ctHoaDon);
+				db.SaveChanges();
+			}
+		}
 	}
 
 }

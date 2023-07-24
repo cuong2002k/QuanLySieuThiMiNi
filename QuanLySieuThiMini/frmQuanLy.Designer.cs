@@ -31,7 +31,7 @@
 			this.components = new System.ComponentModel.Container();
 			this.MainControl = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
 			this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
-			this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.btnTongQuan = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.btnKhachHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.btnNhanVien = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -55,7 +55,7 @@
 			// 
 			this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
 			this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement1,
+            this.btnTongQuan,
             this.btnKhachHang,
             this.btnNhanVien,
             this.accordionControlElement4,
@@ -67,10 +67,11 @@
 			this.accordionControl1.TabIndex = 1;
 			this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
 			// 
-			// accordionControlElement1
+			// btnTongQuan
 			// 
-			this.accordionControlElement1.Name = "accordionControlElement1";
-			this.accordionControlElement1.Text = "Tổng quan";
+			this.btnTongQuan.Name = "btnTongQuan";
+			this.btnTongQuan.Text = "Tổng quan";
+			this.btnTongQuan.Click += new System.EventHandler(this.btnTongQuan_Click);
 			// 
 			// btnKhachHang
 			// 
@@ -93,6 +94,7 @@
 			// 
 			this.accordionControlElement5.Name = "accordionControlElement5";
 			this.accordionControlElement5.Text = "Thoát";
+			this.accordionControlElement5.Click += new System.EventHandler(this.accordionControlElement5_Click);
 			// 
 			// fluentDesignFormControl1
 			// 
@@ -132,7 +134,7 @@
 		private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer MainControl;
 		private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
 		private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
-		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
+		private DevExpress.XtraBars.Navigation.AccordionControlElement btnTongQuan;
 		private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement btnKhachHang;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement btnNhanVien;

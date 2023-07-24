@@ -33,5 +33,10 @@ namespace BUS
 		{
 			dalKhachHang.ThemKhachHang(TKhachHang);
 		}
+
+		public KhachHang TimKhachHang(string sdt)
+		{
+			return dalKhachHang.TimKhachHang(sdt);
+		}
 	}
 }

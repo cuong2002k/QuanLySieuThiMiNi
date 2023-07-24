@@ -50,6 +50,7 @@
 			// 
 			accordionControlElement6.Name = "accordionControlElement6";
 			accordionControlElement6.Text = "Thoát";
+			accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement6_Click);
 			// 
 			// MainContainer
 			// 

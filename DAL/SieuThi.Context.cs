@@ -28,7 +28,6 @@ namespace DAL
         public virtual DbSet<ChamCong> ChamCong { get; set; }
         public virtual DbSet<DSKhuyenMai> DSKhuyenMai { get; set; }
         public virtual DbSet<GiaoCa> GiaoCa { get; set; }
-        public virtual DbSet<HoaDon> HoaDon { get; set; }
         public virtual DbSet<HoaDonCT> HoaDonCT { get; set; }
         public virtual DbSet<KhuyenMai> KhuyenMai { get; set; }
         public virtual DbSet<MucHangKhachHang> MucHangKhachHang { get; set; }
@@ -44,5 +43,6 @@ namespace DAL
         public virtual DbSet<PhieuTraHang> PhieuTraHang { get; set; }
         public virtual DbSet<PhieuTraHangCT> PhieuTraHangCT { get; set; }
         public virtual DbSet<KhachHang> KhachHang { get; set; }
+        public virtual DbSet<HoaDon> HoaDon { get; set; }
     }
 }

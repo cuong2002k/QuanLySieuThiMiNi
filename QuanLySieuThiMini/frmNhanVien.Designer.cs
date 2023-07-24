@@ -33,8 +33,8 @@
 			this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
 			this.btnBanHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.btnHangHoa = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.btnThoat = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
 			this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
@@ -45,9 +45,9 @@
 			// MainControl
 			// 
 			this.MainControl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.MainControl.Location = new System.Drawing.Point(144, 31);
+			this.MainControl.Location = new System.Drawing.Point(157, 31);
 			this.MainControl.Name = "MainControl";
-			this.MainControl.Size = new System.Drawing.Size(547, 442);
+			this.MainControl.Size = new System.Drawing.Size(534, 442);
 			this.MainControl.TabIndex = 0;
 			// 
 			// accordionControl1
@@ -56,11 +56,11 @@
 			this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnBanHang,
             this.accordionControlElement2,
-            this.accordionControlElement3,
-            this.accordionControlElement4});
+            this.btnHangHoa,
+            this.btnThoat});
 			this.accordionControl1.Location = new System.Drawing.Point(0, 31);
 			this.accordionControl1.Name = "accordionControl1";
-			this.accordionControl1.Size = new System.Drawing.Size(144, 442);
+			this.accordionControl1.Size = new System.Drawing.Size(157, 442);
 			this.accordionControl1.TabIndex = 1;
 			this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
 			// 
@@ -74,19 +74,19 @@
 			// 
 			this.accordionControlElement2.Name = "accordionControlElement2";
 			this.accordionControlElement2.Text = "Khách Hàng";
+			this.accordionControlElement2.Click += new System.EventHandler(this.accordionControlElement2_Click);
 			// 
-			// accordionControlElement3
+			// btnHangHoa
 			// 
-			this.accordionControlElement3.Name = "accordionControlElement3";
-			this.accordionControlElement3.Text = "Hàng Hóa";
+			this.btnHangHoa.Name = "btnHangHoa";
+			this.btnHangHoa.Text = "Hàng Hóa";
+			this.btnHangHoa.Click += new System.EventHandler(this.btnHangHoa_Click);
 			// 
-			// accordionControlElement4
+			// btnThoat
 			// 
-			this.accordionControlElement4.Appearance.Default.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.accordionControlElement4.Appearance.Default.Options.UseFont = true;
-			this.accordionControlElement4.Name = "accordionControlElement4";
-			this.accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.accordionControlElement4.Text = "Thoát";
+			this.btnThoat.Name = "btnThoat";
+			this.btnThoat.Text = "Thoát";
+			this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
 			// 
 			// fluentDesignFormControl1
 			// 
@@ -130,7 +130,7 @@
 		private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement btnBanHang;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
-		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
-		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
+		private DevExpress.XtraBars.Navigation.AccordionControlElement btnHangHoa;
+		private DevExpress.XtraBars.Navigation.AccordionControlElement btnThoat;
 	}
 }

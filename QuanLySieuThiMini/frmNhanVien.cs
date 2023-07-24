@@ -22,6 +22,8 @@ namespace QuanLySieuThiMini
 
 		}
 		UCBanHang ucbanhang;
+		UCHangHoaNV uCHangHoaNV;
+		UCKhachHangNV uCKhachHangNV;
 		private void btnBanHang_Click(object sender, EventArgs e)
 		{
 			if (ucbanhang == null)
@@ -34,6 +36,46 @@ namespace QuanLySieuThiMini
 			else
 			{
 				ucbanhang.BringToFront();
+			}
+		}
+
+		private void btnHangHoa_Click(object sender, EventArgs e)
+		{
+			if (uCHangHoaNV == null)
+			{
+				uCHangHoaNV = new UCHangHoaNV();
+				uCHangHoaNV.Dock = DockStyle.Fill;
+				MainControl.Controls.Add(uCHangHoaNV);
+				uCHangHoaNV.BringToFront();
+			}
+			else
+			{
+				uCHangHoaNV.BringToFront();
+			}
+		}
+
+		private void btnThoat_Click(object sender, EventArgs e)
+		{
+			DialogResult r = MessageBox.Show("Bạn có muốn thoát không ?", "Thông báo", MessageBoxButtons.YesNo);
+
+			if(r == DialogResult.Yes)
+			{
+				Application.Exit();
+			}
+		}
+
+		private void accordionControlElement2_Click(object sender, EventArgs e)
+		{
+			if (uCKhachHangNV == null)
+			{
+				uCKhachHangNV = new UCKhachHangNV();
+				uCKhachHangNV.Dock = DockStyle.Fill;
+				MainControl.Controls.Add(uCKhachHangNV);
+				uCKhachHangNV.BringToFront();
+			}
+			else
+			{
+				uCKhachHangNV.BringToFront();
 			}
 		}
 	}

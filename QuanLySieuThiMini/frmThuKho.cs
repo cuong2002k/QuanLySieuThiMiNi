@@ -85,5 +85,15 @@ namespace QuanLySieuThiMini
 			}
 
 		}
+
+		private void accordionControlElement6_Click(object sender, EventArgs e)
+		{
+			DialogResult r = MessageBox.Show("Bạn có muốn thoát không ?", "Thông báo", MessageBoxButtons.YesNo);
+
+			if (r == DialogResult.Yes)
+			{
+				Application.Exit();
+			}
+		}
 	}
 }

@@ -63,9 +63,9 @@
             <PropertyRef Name="SoHD" />
           </Key>
           <Property Name="SoHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MaNV" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="NgayLap" Type="nvarchar" MaxLength="50" />
-          <Property Name="MaKH" Type="varchar" MaxLength="10" />
+          <Property Name="MaNV" Type="int" Nullable="false" />
+          <Property Name="NgayLap" Type="date" />
+          <Property Name="MaKH" Type="int" />
           <Property Name="VAT" Type="int" />
           <Property Name="TienKhachDua" Type="int" />
           <Property Name="TienGuiKhach" Type="int" />
@@ -295,20 +295,6 @@
           <Property Name="MaCaLam" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="MaChamCong" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="HoaDon">
-          <Key>
-            <PropertyRef Name="SoHD" />
-          </Key>
-          <Property Name="SoHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MaNV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="NgayLap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MaKH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="VAT" Type="Int32" />
-          <Property Name="TienKhachDua" Type="Int32" />
-          <Property Name="TienGuiKhach" Type="Int32" />
-          <Property Name="TongTienKM" Type="Int32" />
-          <Property Name="ThanhTien" Type="Int32" />
-        </EntityType>
         <EntityType Name="HoaDonCT">
           <Key>
             <PropertyRef Name="SoHD" />
@@ -422,7 +408,6 @@
           <EntitySet Name="ChamCong" EntityType="Self.ChamCong" />
           <EntitySet Name="DSKhuyenMai" EntityType="Self.DSKhuyenMai" />
           <EntitySet Name="GiaoCa" EntityType="Self.GiaoCa" />
-          <EntitySet Name="HoaDon" EntityType="Self.HoaDon" />
           <EntitySet Name="HoaDonCT" EntityType="Self.HoaDonCT" />
           <EntitySet Name="KhuyenMai" EntityType="Self.KhuyenMai" />
           <EntitySet Name="MucHangKhachHang" EntityType="Self.MucHangKhachHang" />
@@ -442,6 +427,7 @@
           <EntitySet Name="PhieuTraHang" EntityType="SieuThiMini.PhieuTraHang" />
           <EntitySet Name="PhieuTraHangCT" EntityType="SieuThiMini.PhieuTraHangCT" />
           <EntitySet Name="KhachHang" EntityType="SieuThiMini.KhachHang" />
+          <EntitySet Name="HoaDon" EntityType="SieuThiMini.HoaDon" />
         </EntityContainer>
         <EntityType Name="HangHoa">
           <Key>
@@ -511,6 +497,20 @@
           <Property Name="NgayTao" Type="DateTime" Precision="0" />
           <Property Name="NamGanBo" Type="Int32" />
         </EntityType>
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="SoHD" />
+          </Key>
+          <Property Name="SoHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaNV" Type="Int32" Nullable="false" />
+          <Property Name="NgayLap" Type="DateTime" Precision="0" />
+          <Property Name="MaKH" Type="Int32" />
+          <Property Name="VAT" Type="Int32" />
+          <Property Name="TienKhachDua" Type="Int32" />
+          <Property Name="TienGuiKhach" Type="Int32" />
+          <Property Name="TongTienKM" Type="Int32" />
+          <Property Name="ThanhTien" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -552,21 +552,6 @@
                 <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
                 <ScalarProperty Name="MaCaLam" ColumnName="MaCaLam" />
                 <ScalarProperty Name="MaChamCong" ColumnName="MaChamCong" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="HoaDon">
-            <EntityTypeMapping TypeName="SieuThiMini.HoaDon">
-              <MappingFragment StoreEntitySet="HoaDon">
-                <ScalarProperty Name="SoHD" ColumnName="SoHD" />
-                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
-                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
-                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
-                <ScalarProperty Name="VAT" ColumnName="VAT" />
-                <ScalarProperty Name="TienKhachDua" ColumnName="TienKhachDua" />
-                <ScalarProperty Name="TienGuiKhach" ColumnName="TienGuiKhach" />
-                <ScalarProperty Name="TongTienKM" ColumnName="TongTienKM" />
-                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -743,6 +728,21 @@
                 <ScalarProperty Name="CMND" ColumnName="CMND" />
                 <ScalarProperty Name="TenKH" ColumnName="TenKH" />
                 <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoaDon">
+            <EntityTypeMapping TypeName="SieuThiMini.HoaDon">
+              <MappingFragment StoreEntitySet="HoaDon">
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+                <ScalarProperty Name="TongTienKM" ColumnName="TongTienKM" />
+                <ScalarProperty Name="TienGuiKhach" ColumnName="TienGuiKhach" />
+                <ScalarProperty Name="TienKhachDua" ColumnName="TienKhachDua" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="SoHD" ColumnName="SoHD" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
