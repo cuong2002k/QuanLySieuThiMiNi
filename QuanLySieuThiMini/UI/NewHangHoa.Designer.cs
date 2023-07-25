@@ -59,7 +59,6 @@
 			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -68,6 +67,7 @@
 			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.nhomHangTableAdapter = new QuanLySieuThiMini.SieuThiMiniDataSetTableAdapters.NhomHangTableAdapter();
 			this.nhaCungCapTableAdapter = new QuanLySieuThiMini.SieuThiMiniDataSetTableAdapters.NhaCungCapTableAdapter();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -96,7 +96,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
@@ -105,6 +104,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupControl1
@@ -188,10 +188,12 @@
             "Chiếc",
             "Hộp",
             "Bịch",
-            "Thùng"});
-			this.cboDonViTinh.Location = new System.Drawing.Point(302, 61);
+            "Thùng",
+            "Kg",
+            "Quả"});
+			this.cboDonViTinh.Location = new System.Drawing.Point(408, 61);
 			this.cboDonViTinh.Name = "cboDonViTinh";
-			this.cboDonViTinh.Size = new System.Drawing.Size(336, 21);
+			this.cboDonViTinh.Size = new System.Drawing.Size(230, 21);
 			this.cboDonViTinh.TabIndex = 17;
 			// 
 			// layoutControl2
@@ -306,7 +308,7 @@
 			this.txtGiaNhap.Location = new System.Drawing.Point(93, 61);
 			this.txtGiaNhap.Name = "txtGiaNhap";
 			this.txtGiaNhap.Properties.ValidateOnEnterKey = true;
-			this.txtGiaNhap.Size = new System.Drawing.Size(124, 20);
+			this.txtGiaNhap.Size = new System.Drawing.Size(230, 20);
 			this.txtGiaNhap.StyleController = this.layoutControl1;
 			this.txtGiaNhap.TabIndex = 7;
 			// 
@@ -381,7 +383,7 @@
 			this.layoutControlItem4.Control = this.txtGiaNhap;
 			this.layoutControlItem4.Location = new System.Drawing.Point(0, 49);
 			this.layoutControlItem4.Name = "layoutControlItem4";
-			this.layoutControlItem4.Size = new System.Drawing.Size(209, 25);
+			this.layoutControlItem4.Size = new System.Drawing.Size(315, 25);
 			this.layoutControlItem4.Text = "Giá Nhập";
 			this.layoutControlItem4.TextSize = new System.Drawing.Size(69, 13);
 			// 
@@ -402,15 +404,6 @@
 			this.layoutControlItem11.Size = new System.Drawing.Size(315, 24);
 			this.layoutControlItem11.Text = "VAT";
 			this.layoutControlItem11.TextSize = new System.Drawing.Size(69, 13);
-			// 
-			// layoutControlItem5
-			// 
-			this.layoutControlItem5.Control = this.txtGiaBan;
-			this.layoutControlItem5.Location = new System.Drawing.Point(0, 147);
-			this.layoutControlItem5.Name = "layoutControlItem5";
-			this.layoutControlItem5.Size = new System.Drawing.Size(315, 24);
-			this.layoutControlItem5.Text = "Giá Bán";
-			this.layoutControlItem5.TextSize = new System.Drawing.Size(69, 13);
 			// 
 			// layoutControlItem10
 			// 
@@ -460,9 +453,9 @@
 			// layoutControlItem8
 			// 
 			this.layoutControlItem8.Control = this.cboDonViTinh;
-			this.layoutControlItem8.Location = new System.Drawing.Point(209, 49);
+			this.layoutControlItem8.Location = new System.Drawing.Point(315, 49);
 			this.layoutControlItem8.Name = "layoutControlItem8";
-			this.layoutControlItem8.Size = new System.Drawing.Size(421, 25);
+			this.layoutControlItem8.Size = new System.Drawing.Size(315, 25);
 			this.layoutControlItem8.Text = "Đơn Vị Tính";
 			this.layoutControlItem8.TextSize = new System.Drawing.Size(69, 13);
 			// 
@@ -483,6 +476,15 @@
 			this.layoutControlItem3.Size = new System.Drawing.Size(315, 25);
 			this.layoutControlItem3.Text = "Nhóm Hàng";
 			this.layoutControlItem3.TextSize = new System.Drawing.Size(69, 13);
+			// 
+			// layoutControlItem5
+			// 
+			this.layoutControlItem5.Control = this.txtGiaBan;
+			this.layoutControlItem5.Location = new System.Drawing.Point(0, 147);
+			this.layoutControlItem5.Name = "layoutControlItem5";
+			this.layoutControlItem5.Size = new System.Drawing.Size(315, 24);
+			this.layoutControlItem5.Text = "Giá Bán";
+			this.layoutControlItem5.TextSize = new System.Drawing.Size(69, 13);
 			// 
 			// nhomHangTableAdapter
 			// 
@@ -529,7 +531,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
@@ -538,6 +539,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
 			this.ResumeLayout(false);
 
 		}

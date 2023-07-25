@@ -37,7 +37,7 @@
 			this.btnNhaCungCap = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.btnNhapHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.btnTraHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
 			this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
 			accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -68,7 +68,7 @@
             this.btnNhaCungCap,
             this.accordionControlElement3,
             this.btnNhapHang,
-            this.accordionControlElement5,
+            this.btnTraHang,
             accordionControlElement6});
 			this.accordionControl1.Location = new System.Drawing.Point(0, 31);
 			this.accordionControl1.Name = "accordionControl1";
@@ -101,10 +101,11 @@
 			this.btnNhapHang.Text = "Nhập Hàng";
 			this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click);
 			// 
-			// accordionControlElement5
+			// btnTraHang
 			// 
-			this.accordionControlElement5.Name = "accordionControlElement5";
-			this.accordionControlElement5.Text = "Trả Hàng";
+			this.btnTraHang.Name = "btnTraHang";
+			this.btnTraHang.Text = "Trả Hàng";
+			this.btnTraHang.Click += new System.EventHandler(this.btnTraHang_Click);
 			// 
 			// fluentDesignFormControl1
 			// 
@@ -130,7 +131,7 @@
 			this.Controls.Add(this.accordionControl1);
 			this.Controls.Add(this.fluentDesignFormControl1);
 			this.FluentDesignFormControl = this.fluentDesignFormControl1;
-			this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("frmQuanLyKho.IconOptions.SvgImage")));
+			this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmQuanLyKho.IconOptions.Image")));
 			this.Name = "frmQuanLyKho";
 			this.NavigationControl = this.accordionControl1;
 			this.Text = "Quản Lý Siêu Thị Mini";
@@ -152,7 +153,7 @@
 		private DevExpress.XtraBars.Navigation.AccordionControlElement btnNhaCungCap;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement btnNhapHang;
-		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
+		private DevExpress.XtraBars.Navigation.AccordionControlElement btnTraHang;
 	}
 }
 

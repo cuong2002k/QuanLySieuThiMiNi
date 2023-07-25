@@ -81,6 +81,8 @@ namespace QuanLySieuThiMini.UI
 				rp.txtmaHd.Text = hd.SoHD.ToString();
 				rp.DataSource = UCBanHang.instance.getdata();
 				rp.txtTongTien.Text = TongTien.ToString();
+				rp.txtTienKhachDua.Text = txtTienKhachDua.Text.Trim();
+				rp.txtTienTraKhach.Text = hd.TienGuiKhach.ToString();
 				UCBanHang.instance.AddHoaDonCT(hd.SoHD);
 				ReportPrintTool revew = new ReportPrintTool(rp);
 				revew.ShowPreview();
@@ -104,6 +106,8 @@ namespace QuanLySieuThiMini.UI
 				rp.txtNgay.Text =  "Ngày Xuất: " + DateTime.Now.ToString("dd/MM/yyyy");
 				rp.txtmaHd.Text =  "Số Hóa Đơn: " + hd.SoHD.ToString();
 				rp.txtTongTien.Text = TongTien.ToString();
+				rp.txtTienKhachDua.Text = txtTienKhachDua.Text.Trim();
+				rp.txtTienTraKhach.Text = hd.TienGuiKhach.ToString();
 				UCBanHang.instance.AddHoaDonCT(hd.SoHD);
 				rp.DataSource = UCBanHang.instance.getdata();
 				ReportPrintTool revew = new ReportPrintTool(rp);

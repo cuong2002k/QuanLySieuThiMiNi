@@ -10,21 +10,17 @@ using System.Windows.Forms;
 using BUS;
 namespace QuanLySieuThiMini.UI
 {
-	public partial class UCHoaDon : UserControl
+	public partial class UCKhachHangNV : UserControl
 	{
-		public UCHoaDon()
+		BUS_KhachHang kh = new BUS_KhachHang();
+		public UCKhachHangNV()
 		{
 			InitializeComponent();
 		}
-		BUS_HoaDon bushd = new BUS_HoaDon();
-		private void UCHoaDon_Load(object sender, EventArgs e)
-		{
-			LoadData();
-		}
 
-		void LoadData()
+		private void UCKhachHangNV_Load(object sender, EventArgs e)
 		{
-			gridControl.DataSource = bushd.getall();
+			grcontrol.DataSource = kh.getall();
 		}
 	}
 }

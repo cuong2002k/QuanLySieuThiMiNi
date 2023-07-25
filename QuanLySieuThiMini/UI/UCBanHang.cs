@@ -52,6 +52,7 @@ namespace QuanLySieuThiMini.UI
 			}
 			lbTongTien.Text = TongTien.ToString();
 		}
+
 		public void Restart()
 		{
 			grDSHHBan.DataSource = null;
@@ -60,6 +61,7 @@ namespace QuanLySieuThiMini.UI
 			TongTien = 0;
 			lbTongTien.Text = TongTien.ToString();
 		}
+
 		private void gvDSHH_DoubleClick(object sender, EventArgs e)
 		{
 			
@@ -94,6 +96,11 @@ namespace QuanLySieuThiMini.UI
 						{
 							if (item.mahh == hb.mahh)
 							{
+								if (item.soluong + 1 > hh.SoLuong)
+								{
+									MessageBox.Show("Số Hàng Không Được Lớn Hơn Số Lượng Hiện Tại!!!");
+									return;
+								}
 								item.UpdataTien(hb.soluong);
 								check = false;
 								LoadHHBan();
@@ -131,6 +138,11 @@ namespace QuanLySieuThiMini.UI
 						{
 							if (item.mahh == hb.mahh)
 							{
+								if(item.soluong + 1 > hh.SoLuong)
+								{
+									MessageBox.Show("Số Hàng Không Được Lớn Hơn Số Lượng Hiện Tại!!!");
+									return;
+								}
 								item.UpdataTien(hb.soluong);
 								check = false;
 								LoadHHBan();
@@ -201,6 +213,9 @@ namespace QuanLySieuThiMini.UI
 				hdct.ThanhTien = item.tongtien;
 				hdct.VAT = item.VAT;
 				bushd.ThemHoaDonCT(hdct);
+				HangHoa hh = bushh.TimHangHoaTheoMAHH(hdct.MaHH);
+				hh.SoLuong -= hdct.Soluong;
+				bushh.SuaHangHoa(hh);
 			}
 		}
 

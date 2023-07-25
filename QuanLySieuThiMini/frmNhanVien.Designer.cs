@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
 			this.MainControl = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
 			this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
 			this.btnBanHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -112,9 +113,10 @@
 			this.Controls.Add(this.accordionControl1);
 			this.Controls.Add(this.fluentDesignFormControl1);
 			this.FluentDesignFormControl = this.fluentDesignFormControl1;
+			this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmNhanVien.IconOptions.Image")));
 			this.Name = "frmNhanVien";
 			this.NavigationControl = this.accordionControl1;
-			this.Text = "frmNhanVien";
+			this.Text = "Quản Lý Siêu Thị Mini";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();

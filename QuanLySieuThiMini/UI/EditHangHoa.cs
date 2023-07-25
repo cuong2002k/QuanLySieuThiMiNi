@@ -47,7 +47,28 @@ namespace QuanLySieuThiMini.UI
 			txtVAT.Text = hh.VAT.ToString();
 			ckTrangThaiBan.Checked = (hh.TrangThaiBan == true) ? true : false ;
 		}
+		bool check()
+		{
+			if(
+			string.IsNullOrEmpty(txtMaHH.Text) ||
+			string.IsNullOrEmpty(txtTenHangHoa.Text)||
+			cboNhomHang.SelectedValue != null ||
+			string.IsNullOrEmpty(txtXuatXu.Text) ||
+			string.IsNullOrEmpty(txtGiaNhap.Text)||
+			string.IsNullOrEmpty(txtGiaBan.Text) ||
+			string.IsNullOrEmpty(cboDonViTinh.Text)||
+			cboNhaCungCap.SelectedValue != null ||
+			string.IsNullOrEmpty(txtMaVach.Text) ||
+			string.IsNullOrEmpty(txtSoLuong.Text)||
+			string.IsNullOrEmpty(txtDinhMuc.Text)||
+			string.IsNullOrEmpty(txtVAT.Text)
+			)
+			{
+				return false;
+			}
 
+			return true;
+		}
 		public void filldata(HangHoa hanghoa)
 		{
 			hh = new HangHoa();
@@ -65,6 +86,11 @@ namespace QuanLySieuThiMini.UI
 
 		private void btnLuu_Click(object sender, EventArgs e)
 		{
+			if(!check())
+			{
+				MessageBox.Show("Thông Tin Không Được Trống !!!");
+				return;
+			}
 			HangHoa hh = new HangHoa();
 			hh.MaHH = int.Parse(txtMaHH.Text);
 			hh.TenHang = txtTenHangHoa.Text.Trim();

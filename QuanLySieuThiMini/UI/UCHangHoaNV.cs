@@ -7,24 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BUS;
+
 namespace QuanLySieuThiMini.UI
 {
-	public partial class UCHoaDon : UserControl
+	public partial class UCHangHoaNV : UserControl
 	{
-		public UCHoaDon()
+		BUS.BUS_HangHoa hh = new BUS.BUS_HangHoa();
+		public UCHangHoaNV()
 		{
 			InitializeComponent();
 		}
-		BUS_HoaDon bushd = new BUS_HoaDon();
-		private void UCHoaDon_Load(object sender, EventArgs e)
-		{
-			LoadData();
-		}
 
-		void LoadData()
+		private void UCHangHoaNV_Load(object sender, EventArgs e)
 		{
-			gridControl.DataSource = bushd.getall();
+			grcontrol.DataSource = hh.getall();
 		}
 	}
 }

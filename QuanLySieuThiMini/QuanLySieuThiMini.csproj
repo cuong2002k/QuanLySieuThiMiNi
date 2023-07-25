@@ -14,6 +14,22 @@
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\PM\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +49,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D293E4FEB3BC7E1706947E44551A707C23A2DEF0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>QuanLySieuThiMini_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
@@ -119,17 +147,17 @@
     <Compile Include="frmThuKho.Designer.cs">
       <DependentUpon>frmThuKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTest.Designer.cs">
-      <DependentUpon>FormTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="HoaDonRp.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="HoaDonRp.Designer.cs">
       <DependentUpon>HoaDonRp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="PhieuBan.cs">
       <DependentUpon>PhieuBan.xsd</DependentUpon>
@@ -200,6 +228,12 @@
     <Compile Include="UI\UCHangHoa.Designer.cs">
       <DependentUpon>UCHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UCHangHoaNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UCHangHoaNV.Designer.cs">
+      <DependentUpon>UCHangHoaNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UCHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -211,6 +245,12 @@
     </Compile>
     <Compile Include="UI\UCKhachHang.Designer.cs">
       <DependentUpon>UCKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UCKhachHangNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UCKhachHangNV.Designer.cs">
+      <DependentUpon>UCKhachHangNV.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UCNhaCungCap.cs">
       <SubType>UserControl</SubType>
@@ -254,11 +294,11 @@
     <EmbeddedResource Include="frmThuKho.resx">
       <DependentUpon>frmThuKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTest.resx">
-      <DependentUpon>FormTest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="HoaDonRp.resx">
       <DependentUpon>HoaDonRp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -297,11 +337,17 @@
     <EmbeddedResource Include="UI\UCHangHoa.resx">
       <DependentUpon>UCHangHoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCHangHoaNV.resx">
+      <DependentUpon>UCHangHoaNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\UCHoaDon.resx">
       <DependentUpon>UCHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UCKhachHang.resx">
       <DependentUpon>UCKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCKhachHangNV.resx">
+      <DependentUpon>UCKhachHangNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UCNhaCungCap.resx">
       <DependentUpon>UCNhaCungCap.cs</DependentUpon>
@@ -342,6 +388,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QuanLySieuThiMini_TemporaryKey.pfx" />
     <None Include="SieuThiMiniDataSet1.xsc">
       <DependentUpon>SieuThiMiniDataSet1.xsd</DependentUpon>
     </None>
@@ -363,6 +410,18 @@
       <Project>{E183B987-954A-4C5E-84D0-19ECE9B494B6}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

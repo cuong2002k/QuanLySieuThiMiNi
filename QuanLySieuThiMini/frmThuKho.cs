@@ -95,5 +95,20 @@ namespace QuanLySieuThiMini
 				Application.Exit();
 			}
 		}
+		UCTraHang uCTraHang;
+		private void btnTraHang_Click(object sender, EventArgs e)
+		{
+			if (uCTraHang == null)
+			{
+				uCTraHang = new UCTraHang();
+				uCTraHang.Dock = DockStyle.Fill;
+				MainContainer.Controls.Add(uCTraHang);
+				uCTraHang.BringToFront();
+			}
+			else
+			{
+				uCTraHang.BringToFront();
+			}
+		}
 	}
 }

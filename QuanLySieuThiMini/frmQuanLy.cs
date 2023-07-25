@@ -20,6 +20,7 @@ namespace QuanLySieuThiMini
 		UCKhachHang ucKhachHang;
 		UCNhanVien ucNhanVien;
 		ChardTongQuan uctq;
+		UCHoaDon ucHoaDon;
 		private void btnKhachHang_Click(object sender, EventArgs e)
 		{
 			if (ucKhachHang == null)
@@ -72,6 +73,21 @@ namespace QuanLySieuThiMini
 			else
 			{
 				uctq.BringToFront();
+			}
+		}
+
+		private void btnHoaDon_Click(object sender, EventArgs e)
+		{
+			if (ucHoaDon == null)
+			{
+				ucHoaDon = new UCHoaDon();
+				ucHoaDon.Dock = DockStyle.Fill;
+				MainControl.Controls.Add(ucHoaDon);
+				ucHoaDon.BringToFront();
+			}
+			else
+			{
+				ucHoaDon.BringToFront();
 			}
 		}
 	}

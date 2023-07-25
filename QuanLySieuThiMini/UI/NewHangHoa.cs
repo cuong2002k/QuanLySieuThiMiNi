@@ -36,9 +36,34 @@ namespace QuanLySieuThiMini.UI
 				this.Close();
 			}
 		}
+		bool check()
+		{
+			if (
+			string.IsNullOrEmpty(txtTenHangHoa.Text) ||
+			cboNhomHang.SelectedValue != null ||
+			string.IsNullOrEmpty(txtXuatXu.Text) ||
+			string.IsNullOrEmpty(txtGiaNhap.Text) ||
+			string.IsNullOrEmpty(txtGiaBan.Text) ||
+			string.IsNullOrEmpty(cboDonViTinh.Text) ||
+			cboNhaCungCap.SelectedValue != null ||
+			string.IsNullOrEmpty(txtMaVach.Text) ||
+			string.IsNullOrEmpty(txtSoLuong.Text) ||
+			string.IsNullOrEmpty(txtDinhMuc.Text) ||
+			string.IsNullOrEmpty(txtVAT.Text)
+			)
+			{
+				return false;
+			}
 
+			return true;
+		}
 		private void btnLuu_Click(object sender, EventArgs e)
 		{
+			if (!check())
+			{
+				MessageBox.Show("Thông Tin Không Được Trống !!!");
+				return;
+			}
 			HangHoa hh = new HangHoa();
 			hh.TenHang = txtTenHangHoa.Text.Trim();
 			hh.MaNH = int.Parse(cboNhomHang.SelectedValue.ToString());

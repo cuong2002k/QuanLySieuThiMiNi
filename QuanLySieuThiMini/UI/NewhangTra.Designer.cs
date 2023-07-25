@@ -34,7 +34,10 @@
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
 			this.txtLydoXuat = new System.Windows.Forms.RichTextBox();
 			this.cboNhomHang = new System.Windows.Forms.ComboBox();
+			this.nhomHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.sieuThiMiniDataSet = new QuanLySieuThiMini.SieuThiMiniDataSet();
 			this.cboNhaCungCap = new System.Windows.Forms.ComboBox();
+			this.nhaCungCapBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.cboDonViTinh = new System.Windows.Forms.ComboBox();
 			this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
 			this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
@@ -52,6 +55,7 @@
 			this.txtTenHangHoa = new DevExpress.XtraEditors.TextEdit();
 			this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -64,16 +68,15 @@
 			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.sieuThiMiniDataSet = new QuanLySieuThiMini.SieuThiMiniDataSet();
-			this.nhomHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.nhomHangTableAdapter = new QuanLySieuThiMini.SieuThiMiniDataSetTableAdapters.NhomHangTableAdapter();
-			this.nhaCungCapBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.nhaCungCapTableAdapter = new QuanLySieuThiMini.SieuThiMiniDataSetTableAdapters.NhaCungCapTableAdapter();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
 			this.groupControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nhomHangBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.sieuThiMiniDataSet)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nhaCungCapBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
 			this.layoutControl2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -88,6 +91,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.txtTenHangHoa.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
@@ -100,10 +104,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.sieuThiMiniDataSet)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.nhomHangBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.nhaCungCapBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupControl1
@@ -159,6 +159,16 @@
 			this.cboNhomHang.TabIndex = 19;
 			this.cboNhomHang.ValueMember = "MaNH";
 			// 
+			// nhomHangBindingSource
+			// 
+			this.nhomHangBindingSource.DataMember = "NhomHang";
+			this.nhomHangBindingSource.DataSource = this.sieuThiMiniDataSet;
+			// 
+			// sieuThiMiniDataSet
+			// 
+			this.sieuThiMiniDataSet.DataSetName = "SieuThiMiniDataSet";
+			this.sieuThiMiniDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
 			// cboNhaCungCap
 			// 
 			this.cboNhaCungCap.DataSource = this.nhaCungCapBindingSource;
@@ -171,6 +181,11 @@
 			this.cboNhaCungCap.TabIndex = 18;
 			this.cboNhaCungCap.ValueMember = "MaNCC";
 			// 
+			// nhaCungCapBindingSource
+			// 
+			this.nhaCungCapBindingSource.DataMember = "NhaCungCap";
+			this.nhaCungCapBindingSource.DataSource = this.sieuThiMiniDataSet;
+			// 
 			// cboDonViTinh
 			// 
 			this.cboDonViTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -180,7 +195,9 @@
             "Chiếc",
             "Hộp",
             "Bịch",
-            "Thùng"});
+            "Thùng",
+            "Kg",
+            "Quả"});
 			this.cboDonViTinh.Location = new System.Drawing.Point(411, 61);
 			this.cboDonViTinh.Name = "cboDonViTinh";
 			this.cboDonViTinh.Size = new System.Drawing.Size(216, 21);
@@ -362,6 +379,14 @@
 			this.layoutControlItem1.Text = "Tên Hàng Hóa";
 			this.layoutControlItem1.TextSize = new System.Drawing.Size(78, 13);
 			// 
+			// emptySpaceItem1
+			// 
+			this.emptySpaceItem1.AllowHotTrack = false;
+			this.emptySpaceItem1.Location = new System.Drawing.Point(0, 228);
+			this.emptySpaceItem1.Name = "emptySpaceItem1";
+			this.emptySpaceItem1.Size = new System.Drawing.Size(309, 50);
+			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+			// 
 			// layoutControlItem4
 			// 
 			this.layoutControlItem4.Control = this.txtGiaNhap;
@@ -470,45 +495,22 @@
 			this.layoutControlItem11.Text = "Lý do xuất hàng";
 			this.layoutControlItem11.TextSize = new System.Drawing.Size(78, 13);
 			// 
-			// emptySpaceItem1
-			// 
-			this.emptySpaceItem1.AllowHotTrack = false;
-			this.emptySpaceItem1.Location = new System.Drawing.Point(0, 228);
-			this.emptySpaceItem1.Name = "emptySpaceItem1";
-			this.emptySpaceItem1.Size = new System.Drawing.Size(309, 50);
-			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// sieuThiMiniDataSet
-			// 
-			this.sieuThiMiniDataSet.DataSetName = "SieuThiMiniDataSet";
-			this.sieuThiMiniDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// nhomHangBindingSource
-			// 
-			this.nhomHangBindingSource.DataMember = "NhomHang";
-			this.nhomHangBindingSource.DataSource = this.sieuThiMiniDataSet;
-			// 
 			// nhomHangTableAdapter
 			// 
 			this.nhomHangTableAdapter.ClearBeforeFill = true;
-			// 
-			// nhaCungCapBindingSource
-			// 
-			this.nhaCungCapBindingSource.DataMember = "NhaCungCap";
-			this.nhaCungCapBindingSource.DataSource = this.sieuThiMiniDataSet;
 			// 
 			// nhaCungCapTableAdapter
 			// 
 			this.nhaCungCapTableAdapter.ClearBeforeFill = true;
 			// 
-			// ThemhangTra
+			// NewhangTra
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(643, 323);
 			this.Controls.Add(this.groupControl1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Name = "ThemhangTra";
+			this.Name = "NewhangTra";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "ThemhangTra";
 			this.Load += new System.EventHandler(this.ThemhangTra_Load);
@@ -516,6 +518,9 @@
 			this.groupControl1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
 			this.layoutControl1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.nhomHangBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.sieuThiMiniDataSet)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nhaCungCapBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
 			this.layoutControl2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -530,6 +535,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.txtTenHangHoa.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
@@ -542,10 +548,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.sieuThiMiniDataSet)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.nhomHangBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.nhaCungCapBindingSource)).EndInit();
 			this.ResumeLayout(false);
 
 		}

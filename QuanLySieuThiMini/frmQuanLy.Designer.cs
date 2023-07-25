@@ -29,12 +29,13 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLy));
 			this.MainControl = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
 			this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
 			this.btnTongQuan = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.btnKhachHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.btnNhanVien = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.btnHoaDon = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
 			this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
@@ -58,7 +59,7 @@
             this.btnTongQuan,
             this.btnKhachHang,
             this.btnNhanVien,
-            this.accordionControlElement4,
+            this.btnHoaDon,
             this.accordionControlElement5});
 			this.accordionControl1.Location = new System.Drawing.Point(0, 31);
 			this.accordionControl1.Name = "accordionControl1";
@@ -85,10 +86,11 @@
 			this.btnNhanVien.Text = "Nhân Viên";
 			this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
 			// 
-			// accordionControlElement4
+			// btnHoaDon
 			// 
-			this.accordionControlElement4.Name = "accordionControlElement4";
-			this.accordionControlElement4.Text = "Hóa đơn";
+			this.btnHoaDon.Name = "btnHoaDon";
+			this.btnHoaDon.Text = "Hóa đơn";
+			this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
 			// 
 			// accordionControlElement5
 			// 
@@ -120,6 +122,7 @@
 			this.Controls.Add(this.accordionControl1);
 			this.Controls.Add(this.fluentDesignFormControl1);
 			this.FluentDesignFormControl = this.fluentDesignFormControl1;
+			this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmQuanLy.IconOptions.Image")));
 			this.Name = "frmQuanLy";
 			this.NavigationControl = this.accordionControl1;
 			this.Text = "Quản lý siêu thị mini";
@@ -139,7 +142,7 @@
 		private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement btnKhachHang;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement btnNhanVien;
-		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
+		private DevExpress.XtraBars.Navigation.AccordionControlElement btnHoaDon;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
 	}
 }

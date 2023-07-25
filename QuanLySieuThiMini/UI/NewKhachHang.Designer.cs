@@ -77,7 +77,7 @@
 			this.layoutControl1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl1.Name = "layoutControl1";
 			this.layoutControl1.Root = this.Root;
-			this.layoutControl1.Size = new System.Drawing.Size(569, 169);
+			this.layoutControl1.Size = new System.Drawing.Size(569, 167);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
 			// 
@@ -158,7 +158,7 @@
             this.layoutControlItem7,
             this.layoutControlItem8});
 			this.Root.Name = "Root";
-			this.Root.Size = new System.Drawing.Size(569, 169);
+			this.Root.Size = new System.Drawing.Size(569, 167);
 			this.Root.TextVisible = false;
 			// 
 			// layoutControlItem1
@@ -175,7 +175,7 @@
 			this.emptySpaceItem1.AllowHotTrack = false;
 			this.emptySpaceItem1.Location = new System.Drawing.Point(0, 120);
 			this.emptySpaceItem1.Name = "emptySpaceItem1";
-			this.emptySpaceItem1.Size = new System.Drawing.Size(386, 29);
+			this.emptySpaceItem1.Size = new System.Drawing.Size(386, 27);
 			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem2
@@ -219,7 +219,7 @@
 			this.layoutControlItem7.Control = this.btnThoat;
 			this.layoutControlItem7.Location = new System.Drawing.Point(461, 120);
 			this.layoutControlItem7.Name = "layoutControlItem7";
-			this.layoutControlItem7.Size = new System.Drawing.Size(88, 29);
+			this.layoutControlItem7.Size = new System.Drawing.Size(88, 27);
 			this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem7.TextVisible = false;
 			// 
@@ -228,7 +228,7 @@
 			this.layoutControlItem8.Control = this.btnLuu;
 			this.layoutControlItem8.Location = new System.Drawing.Point(386, 120);
 			this.layoutControlItem8.Name = "layoutControlItem8";
-			this.layoutControlItem8.Size = new System.Drawing.Size(75, 29);
+			this.layoutControlItem8.Size = new System.Drawing.Size(75, 27);
 			this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem8.TextVisible = false;
 			// 
@@ -236,9 +236,11 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(569, 169);
+			this.ClientSize = new System.Drawing.Size(569, 167);
 			this.Controls.Add(this.layoutControl1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "NewKhachHang";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "ThemHangHoa";
 			this.Load += new System.EventHandler(this.NewKhachHang_Load);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

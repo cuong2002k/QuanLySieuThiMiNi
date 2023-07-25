@@ -221,8 +221,9 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(495, 188);
 			this.Controls.Add(this.layoutControl1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "FormBanHang";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "FormBanHang";
 			this.Load += new System.EventHandler(this.FormBanHang_Load);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
