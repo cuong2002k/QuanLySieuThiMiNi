@@ -27,6 +27,6 @@ namespace DAL
         public Nullable<System.DateTime> NgayVaoLam { get; set; }
         public Nullable<bool> TrangThaiTaiKhoan { get; set; }
         public Nullable<int> Luong { get; set; }
-        public int MaCong { get; set; }
+        public Nullable<int> MaCong { get; set; }
     }
 }

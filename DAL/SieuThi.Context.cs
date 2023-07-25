@@ -39,10 +39,10 @@ namespace DAL
         public virtual DbSet<PhieuNhapHangCT> PhieuNhapHangCT { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<HangHoa> HangHoa { get; set; }
-        public virtual DbSet<NhanVien> NhanVien { get; set; }
         public virtual DbSet<PhieuTraHang> PhieuTraHang { get; set; }
         public virtual DbSet<PhieuTraHangCT> PhieuTraHangCT { get; set; }
         public virtual DbSet<KhachHang> KhachHang { get; set; }
         public virtual DbSet<HoaDon> HoaDon { get; set; }
+        public virtual DbSet<NhanVien> NhanVien { get; set; }
     }
 }

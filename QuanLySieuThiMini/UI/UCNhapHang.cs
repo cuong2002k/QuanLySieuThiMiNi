@@ -14,6 +14,7 @@ namespace QuanLySieuThiMini.UI
 {
 	public partial class UCNhapHang : UserControl
 	{
+		int MANV = 3;
 		public UCNhapHang()
 		{
 			InitializeComponent();
@@ -46,7 +47,9 @@ namespace QuanLySieuThiMini.UI
 			try
 			{
 				int rowCount = gvHangNhap.RowCount;
-
+				PhieuNhapHang hd = new PhieuNhapHang();
+				hd.MaNV = MANV;
+				hd.NgayTao = DateTime.Now;
 				// Lặp qua từng dòng trong GridView
 				for (int i = 0; i < rowCount; i++)
 				{
@@ -93,7 +96,7 @@ namespace QuanLySieuThiMini.UI
 						bushh.AddHangHoa(hanghoa);
 					}
 				}
-				MessageBox.Show("Thêm Thành Công!!");
+				MessageBox.Show("Thêm Hàng Hóa Thành Công!!");
 				grDsHangNhap.DataSource = null;
 			}
 			catch(Exception ex)

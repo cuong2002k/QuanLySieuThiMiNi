@@ -22,8 +22,8 @@ namespace QuanLySieuThiMini
 
 		}
 		UCBanHang ucbanhang;
-		UCHangHoaNV uCHangHoaNV;
-		UCKhachHangNV uCKhachHangNV;
+		//UCHangHoaNV uCHangHoaNV;
+		//UCKhachHangNV uCKhachHangNV;
 		private void btnBanHang_Click(object sender, EventArgs e)
 		{
 			if (ucbanhang == null)
@@ -41,17 +41,17 @@ namespace QuanLySieuThiMini
 
 		private void btnHangHoa_Click(object sender, EventArgs e)
 		{
-			if (uCHangHoaNV == null)
-			{
-				uCHangHoaNV = new UCHangHoaNV();
-				uCHangHoaNV.Dock = DockStyle.Fill;
-				MainControl.Controls.Add(uCHangHoaNV);
-				uCHangHoaNV.BringToFront();
-			}
-			else
-			{
-				uCHangHoaNV.BringToFront();
-			}
+			//if (uCHangHoaNV == null)
+			//{
+			//	uCHangHoaNV = new UCHangHoaNV();
+			//	uCHangHoaNV.Dock = DockStyle.Fill;
+			//	MainControl.Controls.Add(uCHangHoaNV);
+			//	uCHangHoaNV.BringToFront();
+			//}
+			//else
+			//{
+			//	uCHangHoaNV.BringToFront();
+			//}
 		}
 
 		private void btnThoat_Click(object sender, EventArgs e)
@@ -66,17 +66,17 @@ namespace QuanLySieuThiMini
 
 		private void accordionControlElement2_Click(object sender, EventArgs e)
 		{
-			if (uCKhachHangNV == null)
-			{
-				uCKhachHangNV = new UCKhachHangNV();
-				uCKhachHangNV.Dock = DockStyle.Fill;
-				MainControl.Controls.Add(uCKhachHangNV);
-				uCKhachHangNV.BringToFront();
-			}
-			else
-			{
-				uCKhachHangNV.BringToFront();
-			}
+			//if (uCKhachHangNV == null)
+			//{
+			//	uCKhachHangNV = new UCKhachHangNV();
+			//	uCKhachHangNV.Dock = DockStyle.Fill;
+			//	MainControl.Controls.Add(uCKhachHangNV);
+			//	uCKhachHangNV.BringToFront();
+			//}
+			//else
+			//{
+			//	uCKhachHangNV.BringToFront();
+			//}
 		}
 	}
 }

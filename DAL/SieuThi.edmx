@@ -132,7 +132,7 @@
           <Key>
             <PropertyRef Name="MaNV" />
           </Key>
-          <Property Name="MaNV" Type="int" Nullable="false" />
+          <Property Name="MaNV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenNV" Type="nvarchar" MaxLength="50" />
           <Property Name="GioiTinh" Type="bit" />
           <Property Name="NgaySinh" Type="date" />
@@ -145,7 +145,7 @@
           <Property Name="NgayVaoLam" Type="date" />
           <Property Name="TrangThaiTaiKhoan" Type="bit" />
           <Property Name="Luong" Type="int" />
-          <Property Name="MaCong" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaCong" Type="int" />
         </EntityType>
         <EntityType Name="NhomHang">
           <Key>
@@ -423,11 +423,11 @@
             <End Role="KhuyenMai" EntitySet="KhuyenMai" />
           </AssociationSet>
           <EntitySet Name="HangHoa" EntityType="SieuThiMini.HangHoa" />
-          <EntitySet Name="NhanVien" EntityType="SieuThiMini.NhanVien" />
           <EntitySet Name="PhieuTraHang" EntityType="SieuThiMini.PhieuTraHang" />
           <EntitySet Name="PhieuTraHangCT" EntityType="SieuThiMini.PhieuTraHangCT" />
           <EntitySet Name="KhachHang" EntityType="SieuThiMini.KhachHang" />
           <EntitySet Name="HoaDon" EntityType="SieuThiMini.HoaDon" />
+          <EntitySet Name="NhanVien" EntityType="SieuThiMini.NhanVien" />
         </EntityContainer>
         <EntityType Name="HangHoa">
           <Key>
@@ -446,25 +446,6 @@
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="TrangThaiBan" Type="Boolean" />
           <Property Name="VAT" Type="Int32" />
-        </EntityType>
-        <EntityType Name="NhanVien">
-          <Key>
-            <PropertyRef Name="MaNV" />
-          </Key>
-          <Property Name="MaNV" Type="Int32" Nullable="false" />
-          <Property Name="TenNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="GioiTinh" Type="Boolean" />
-          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
-          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="MaQuyen" Type="Int32" />
-          <Property Name="NgayVaoLam" Type="DateTime" Precision="0" />
-          <Property Name="TrangThaiTaiKhoan" Type="Boolean" />
-          <Property Name="Luong" Type="Int32" />
-          <Property Name="MaCong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="PhieuTraHang">
           <Key>
@@ -510,6 +491,25 @@
           <Property Name="TienGuiKhach" Type="Int32" />
           <Property Name="TongTienKM" Type="Int32" />
           <Property Name="ThanhTien" Type="Int32" />
+        </EntityType>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GioiTinh" Type="Boolean" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MaQuyen" Type="Int32" />
+          <Property Name="NgayVaoLam" Type="DateTime" Precision="0" />
+          <Property Name="TrangThaiTaiKhoan" Type="Boolean" />
+          <Property Name="Luong" Type="Int32" />
+          <Property Name="MaCong" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -678,26 +678,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="NhanVien">
-            <EntityTypeMapping TypeName="SieuThiMini.NhanVien">
-              <MappingFragment StoreEntitySet="NhanVien">
-                <ScalarProperty Name="MaCong" ColumnName="MaCong" />
-                <ScalarProperty Name="Luong" ColumnName="Luong" />
-                <ScalarProperty Name="TrangThaiTaiKhoan" ColumnName="TrangThaiTaiKhoan" />
-                <ScalarProperty Name="NgayVaoLam" ColumnName="NgayVaoLam" />
-                <ScalarProperty Name="MaQuyen" ColumnName="MaQuyen" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
-                <ScalarProperty Name="SDT" ColumnName="SDT" />
-                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
-                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
-                <ScalarProperty Name="TenNV" ColumnName="TenNV" />
-                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="PhieuTraHang">
             <EntityTypeMapping TypeName="SieuThiMini.PhieuTraHang">
               <MappingFragment StoreEntitySet="PhieuTraHang">
@@ -743,6 +723,26 @@
                 <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
                 <ScalarProperty Name="MaNV" ColumnName="MaNV" />
                 <ScalarProperty Name="SoHD" ColumnName="SoHD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NhanVien">
+            <EntityTypeMapping TypeName="SieuThiMini.NhanVien">
+              <MappingFragment StoreEntitySet="NhanVien">
+                <ScalarProperty Name="MaCong" ColumnName="MaCong" />
+                <ScalarProperty Name="Luong" ColumnName="Luong" />
+                <ScalarProperty Name="TrangThaiTaiKhoan" ColumnName="TrangThaiTaiKhoan" />
+                <ScalarProperty Name="NgayVaoLam" ColumnName="NgayVaoLam" />
+                <ScalarProperty Name="MaQuyen" ColumnName="MaQuyen" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

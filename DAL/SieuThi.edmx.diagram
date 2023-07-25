@@ -20,11 +20,11 @@
         <EntityTypeShape EntityType="SieuThiMini.sysdiagrams" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="SieuThiMini.FK_KhuyenMai_DSKhuyenMai" ManuallyRouted="false" />
         <EntityTypeShape EntityType="SieuThiMini.HangHoa" Width="1.5" PointX="0.75" PointY="12.75" />
-        <EntityTypeShape EntityType="SieuThiMini.NhanVien" Width="1.5" PointX="5.375" PointY="8.75" />
         <EntityTypeShape EntityType="SieuThiMini.PhieuTraHang" Width="1.5" PointX="7.375" PointY="10.75" />
         <EntityTypeShape EntityType="SieuThiMini.PhieuTraHangCT" Width="1.5" PointX="9.375" PointY="10.75" />
         <EntityTypeShape EntityType="SieuThiMini.KhachHang" Width="1.5" PointX="11.375" PointY="9.75" />
         <EntityTypeShape EntityType="SieuThiMini.HoaDon" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SieuThiMini.NhanVien" Width="1.5" PointX="3.375" PointY="12.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
